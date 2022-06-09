@@ -1,5 +1,5 @@
 //passing data
-d3.csv("data/energy.csv").then(function(data) {
+d3.csv("./data/energy.csv").then(function(data) {
     //group data by country
     var groupByCountry = d3.group(data, function(d) {
         return d.Country;
@@ -86,7 +86,7 @@ function regionalEnergyConsumption(groupByYear2019, groupByCountry) {
     }))
                       
 //passing data from json file to draw the choropleth
-d3.json("/json/countries.json").then(function(json) {
+d3.json("./json/countries.json").then(function(json) {
           //Merge energy consumption data with map data
           //Loop through each consumption data
           for (var i = 0; i < groupByYear2019.length; i++) {

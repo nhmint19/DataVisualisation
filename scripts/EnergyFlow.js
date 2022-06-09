@@ -29,7 +29,7 @@ var sankey = d3.sankey()
               .nodePadding(40)
               .size([innerWidth, innerHeight]);
 
-d3.json("/json/sankey.json").then(function(sankeydata) {
+d3.json("./json/sankey.json").then(function(sankeydata) {
 graph = sankey(sankeydata);
 console.log(graph.links);
 console.log(graph.nodes);

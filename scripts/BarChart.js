@@ -6,7 +6,7 @@ const margin = { top: 50, right: 30, bottom: 50, left: 80};
 const innerWidth = width - margin.left - margin.right;
 const innerHeight = height - margin.top - margin.bottom;
 
-d3.csv("data/Co2Emission.csv").then(function(data) {
+d3.csv("./data/Co2Emission.csv").then(function(data) {
     data.forEach(d => {
         //converting data from string to number
         d['gas'] = +d['gas'];
